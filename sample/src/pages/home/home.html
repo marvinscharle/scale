@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Current Acceleration</h2>
+  <p *ngIf="!isTransmitting">
+    <a href="#" (click)="start()">Start</a>
+  </p>
+  <div *ngIf="isTransmitting">
+    <p>
+      <a href="#" (click)="stop()">Stop</a>
+    </p>
+    <p *ngIf="currentAcceleration$ | async; let acceleration">
+      x: {{acceleration.x}}<br>
+      y: {{acceleration.y}}<br>
+      z: {{acceleration.z}}
+    </p>
+  </div>
+</ion-content>
