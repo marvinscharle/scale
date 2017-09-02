@@ -10,7 +10,7 @@ import {TabsPage} from '../pages/tabs/tabs';
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
-import {DeviceMotion} from '@ionic-native/device-motion';
+import {Gyroscope} from '@ionic-native/gyroscope';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import {DeviceMotion} from '@ionic-native/device-motion';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DeviceMotion
+    Gyroscope
   ]
 })
 export class AppModule {
